@@ -1,4 +1,4 @@
-.git
-.DS_store
+/.git
+/.DS_store
 /node_modules
 /server/public/vendors
