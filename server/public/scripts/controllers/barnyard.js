@@ -21,8 +21,8 @@ myApp.controller('barnyard', ['$scope', '$http', function($scope, $http){
         console.log(response.data);
         $scope.animal = response.data.petfinder.pet;
         $scope.breed = $scope.animal.animal.$t;
-        $scope.getBreeds();
       }
     )
   }
+  $scope.getRandomPet();
 }]);
