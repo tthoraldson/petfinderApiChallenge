@@ -1,3 +1,3 @@
-angular.module('myApp').controller('smallfurry', ['$scope', '$http', function($scope, $http){
-
+myApp.controller('smallfurry', ['$scope', '$http', function($scope, $http){
+  $scope.header = 'Adoptable Small Furry Animals';
 }]);

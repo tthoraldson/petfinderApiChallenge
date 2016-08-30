@@ -1,11 +1,18 @@
-<select>
-  <option value="#barnyard">Barnyard</option>
-  <option value="#bird">Bird</option>
-  <option value="#cat">Cat</option>
-  <option value="#dog">Dog</option>
-  <option value="#horse">Horse</option>
-  <option value="#pig">Pig</option>
-  <option value="#reptile">Reptile</option>
-  <option value="#smallfurry">Small Furry</option>
-</select>
-<button ng-click="" class="btn">Go!</button>
+<ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#favorites">Favorites</a></li>
+  <li class="dropdown">
+    <select ng-model="animal.breed">
+      <option value="#barnyard">Barnyard</a></option>
+      <option value="#bird">Bird</a></option>
+      <option value="#cat">Cat</a></option>
+      <option value="#dog">Dog</a></option>
+      <option value="#horse">Horse</a></option>
+      <option value="#pig">Pig</a></option>
+      <option value="#reptile">Reptile</a></option>
+      <option value="#smallfurry">Small Furry</a></option>
+    </select>
+    <button><a ng-href="{{animal.breed}}">Go!</a></button>
+  </li>
+  <li style="float:right"><a class="active" href="http://github.com/tthoraldson/">@tthoraldson</a></li>
+</ul>

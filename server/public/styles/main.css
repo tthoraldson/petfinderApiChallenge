@@ -1,2 +1,51 @@
-h1 {
+* {
+  font-family: 'Raleway', sans-serif;
 }
+
+h1 {
+  font-size: 3em;
+  margin-top: 10px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+    font-family: 'Abril Fatface', cursive;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li button a {
+  padding: 0;
+  background-color: #FFF;
+  color: black;
+}
+
+/* PSEUDOS */
+li a:hover {
+    background-color: #111;
+}
+
+li button a:hover {
+  background-color: #FFF;
+}
+
+/* CLASSES */
+.dropdown {
+  padding: 14px 16px;
+}
+
+/* IDs */
