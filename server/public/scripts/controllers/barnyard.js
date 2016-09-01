@@ -1,5 +1,6 @@
 myApp.controller('barnyard', ['$scope', '$http', function($scope, $http){
   $scope.header = 'Adoptable Barnyard Animals';
+  $scope.pet = {};
 
   var key = '8cfcf88ec4728c783f3e5497ea6c7afe';
   var baseURL = 'http://api.petfinder.com/';
@@ -23,6 +24,23 @@ myApp.controller('barnyard', ['$scope', '$http', function($scope, $http){
         $scope.breed = $scope.animal.animal.$t;
       }
     )
+  }
+
+  $scope.addFavorite = function() {
+    var animal = {
+      name: $scope.animal.name.$t,
+      photoURL: $scope.animal.media.photos.photo[2].$t,
+      type: 'barnyard'
+    };
+    console.log(animal);
+    $http.post('/favorites', animal).then(function(response) {
+      if(response.status == 201) {
+        console.log('saved favorite');
+        updateFavCount();
+      } else {
+        console.log('error saving favorite');
+      }
+    });
   }
   $scope.getRandomPet();
 }]);
