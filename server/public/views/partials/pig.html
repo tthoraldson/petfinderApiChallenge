@@ -1,5 +1,10 @@
-<header>
-  <center>
-    <h1>{{header}}</h1>
-  </center>
-<header>
+<center>
+<div class="container" ng-controller="pig">
+  <div>
+    <h1>{{animal.name.$t}}</h1>
+    <img src="{{animal.media.photos.photo[2].$t}}" />
+    <p>{{animal.description.$t}}</p>
+  </div>
+  <button ng-click="getRandomPet()">See another Pig</button><button ng-click="addFavorite()">Add to Favorites</button>
+</div>
+</center>

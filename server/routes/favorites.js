@@ -12,9 +12,9 @@ router.post('/', function(req, res) {
       return;
     }
 
-    client.query('INSERT INTO animals (name, imageURL, type) ' +
-                'VALUES ($1, $2, $3)',
-                [animal.name, animal.imageURL, animal.type],
+    client.query('INSERT INTO animals (name, photoURL, type, description) ' +
+                'VALUES ($1, $2, $3, $4)',
+                [animal.name, animal.photoURL, animal.type, animal.description],
                 function(err, result) {
                   done();
                   if (err) {

@@ -30,13 +30,15 @@ myApp.controller('barnyard', ['$scope', '$http', function($scope, $http){
     var animal = {
       name: $scope.animal.name.$t,
       photoURL: $scope.animal.media.photos.photo[2].$t,
-      type: 'barnyard'
+      type: 'barnyard',
+      description: $scope.animal.description.$t.substring(0,100)
     };
+
     console.log(animal);
     $http.post('/favorites', animal).then(function(response) {
       if(response.status == 201) {
         console.log('saved favorite');
-        updateFavCount();
+        // updateFavCount();
       } else {
         console.log('error saving favorite');
       }
