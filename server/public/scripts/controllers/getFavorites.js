@@ -29,7 +29,7 @@ myApp.controller('favorites', ['$scope', '$http', function($scope, $http) {
   }
 
   function updateFavCount() {
-    $http.get('/favorites/count').then(function(response) {
+    $http.get('/favorites/').then(function(response) {
       console.log(response);
       $scope.favCount = response.data.count;
     });

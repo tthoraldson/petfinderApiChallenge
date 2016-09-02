@@ -32,7 +32,7 @@ router.get('/', function(req, res) {
     if (err) {
       console.log(err);
       res.sendStatus(500);
-    }
+    } 
 
     client.query("SELECT * FROM animals",
                   function(err, result) {

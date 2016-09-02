@@ -1,0 +1,10 @@
+<center>
+<div class="container" ng-controller="favorite">
+  <h1>Favorites</h1>
+  <div ng-repeat="pet in pets">
+    <h2>{{pet.name}}</h2>
+    <img src="{{pet.photourl}}" />
+    <p>{{pet.description}}</p>
+    <br/><br/>
+</div>
+</center>

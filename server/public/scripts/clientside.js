@@ -8,6 +8,9 @@ myApp.config(["$routeProvider", function($routeProvider) {
     when("/home", {
       templateUrl: "/views/partials/home.html"
     }).
+    when("/favorite", {
+      templateUrl: "/views/partials/favorites.html"
+    }).
     when("/barnyard", {
       templateUrl: "/views/partials/barnyard.html",
       controller: "barnyard"
